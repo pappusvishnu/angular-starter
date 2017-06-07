@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { AlertModule } from 'ng2-bootstrap/ng2-bootstrap';
 import {
   NgModule,
   ApplicationRef
@@ -63,6 +64,7 @@ type StoreType = {
     BrowserModule,
     FormsModule,
     HttpModule,
+    AlertModule.forRoot(),
     RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules })
   ],
   /**
