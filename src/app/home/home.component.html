@@ -9,12 +9,13 @@
   </div>
 
   <a (click)="showAlert()">showAlert</a>
-  <div *ngFor="let alert of alerts">
-    <alert [type]="alert.type" [dismissOnTimeout]="alertTimeout" dismissible="true" (onClosed)="closedAlert($event, alert.publishedOn)">
-      <span [innerHtml]="alert.msg"></span>
-    </alert>
+  <div style="position:absolute;right:0;top:0;">
+    <div *ngFor="let alert of alerts">
+      <alert [type]="alert.type" [dismissOnTimeout]="alertTimeout" dismissible="true" (onClosed)="closedAlert($event, alert.publishedOn)">
+        <span [innerHtml]="alert.msg"></span>
+      </alert>
+    </div>
   </div>
-
   <hr>
 
   <div>
