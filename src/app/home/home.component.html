@@ -8,6 +8,13 @@
     <pre>npm run start:hmr</pre>
   </div>
 
+  <a (click)="showAlert()">showAlert</a>
+  <div *ngFor="let alert of alerts">
+    <alert [type]="alert.type" [dismissOnTimeout]="alertTimeout" dismissible (onClosed)="closedAlert($event, alert.publishedOn)">
+      <span [innerHtml]="alert.msg"></span>
+    </alert>
+  </div>
+
   <hr>
 
   <div>
