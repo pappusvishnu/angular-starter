@@ -10,7 +10,7 @@
 
   <a (click)="showAlert()">showAlert</a>
   <div *ngFor="let alert of alerts">
-    <alert [type]="alert.type" [dismissOnTimeout]="alertTimeout" dismissible (onClosed)="closedAlert($event, alert.publishedOn)">
+    <alert [type]="alert.type" [dismissOnTimeout]="alertTimeout" dismissible="true" (onClosed)="closedAlert($event, alert.publishedOn)">
       <span [innerHtml]="alert.msg"></span>
     </alert>
   </div>

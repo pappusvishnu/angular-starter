@@ -62,11 +62,13 @@ export class HomeComponent implements OnInit {
   public alerts: any = [
     {
       type: 'success',
-      msg: `<strong>Well done!</strong> You successfully read this important alert message.`
+      msg: `<strong>Well done!</strong> You successfully read this important alert message.`,
+      publishedOn: new Date().getTime()
     },
     {
       type: 'info',
-      msg: `<strong>Heads up!</strong> This alert needs your attention, but it's not super important.`
+      msg: `<strong>Heads up!</strong> This alert needs your attention, but it's not super important.`,
+      publishedOn: new Date().getTime()
     }    
   ];
 
